@@ -39,4 +39,11 @@ public class LoginTest extends BaseTest {
         }
     }
 
+    @Test
+    public void verifyThatUserCanLogOut() {
+        verifyThatUserCanLogin();
+        bookStoreProfilePage.clickOnLogoutButton();
+        Assert.assertTrue(loginPage.loginButton.isDisplayed());
+    }
+
 }
